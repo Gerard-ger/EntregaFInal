@@ -1,0 +1,21 @@
+{
+  "name": "entregafinal",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^6.0.7",
+    "mongoose": "^8.6.0",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.7.5"
+  }
+}

@@ -1,0 +1,16 @@
+<h1>Productos</h1>
+<div class="products">
+    {{#each products}}
+    <div class="product">
+        <h2>{{this.title}}</h2>
+        <img src="{{this.thumbnail}}" alt="{{this.title}}" width="150">
+        <p>{{this.description}}</p>
+        <p>Price: ${{this.price}}</p>
+        <p>Stock: {{this.stock}}</p>
+        <form action="/add-to-cart" method="POST">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="submit">Agregar al carrito</button>
+        </form>
+    </div>
+    {{/each}}
+</div>

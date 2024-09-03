@@ -1,0 +1,57 @@
+### Productos
+
+GET httP://localhost:8080/api/products
+###
+GET httP://localhost:8080/api/products/66d38af9ca446cf285d529d8
+###
+POST httP://localhost:8080/api/products
+Content-Type: application/json
+
+{
+		"title": "product 1",
+		"description": "estos es una descripcion",
+		"code": "001",
+		"price": 1000,
+		"status": "true",
+		"stock": 100,
+		"category": "categoria 1",
+		"thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-vi-rj1-122009f0e7fe0bfa3715906956218434-480-0.jpg"
+	}
+###
+DELETE httP://localhost:8080/api/products/66d39e9ac3919216af50c806
+
+###
+
+
+
+### CARTS
+GET httP://localhost:8080/api/carts
+
+###
+GET httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76
+
+###
+POST  httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76/product/66d3e9cb65e39338dc7b0a25
+
+###
+DELETE httP://localhost:8080/api/carts/66d660668c66b1a68fc46ec8
+
+###
+DELETE  httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76/product/66d3e9cb65e39338dc7b0a25
+
+###
+
+PUT httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76
+Content-Type: application/json
+
+{
+	[{"productId": "66d3e9cb65e39338dc7b0a25", "quantity": 2},
+	{"productId": "66d3e9e565e39338dc7b0a2d", "quantity": 1},
+	{"productId": "66d3ec4165e39338dc7b0a38", "quantity": 1},
+	]
+}
+
+###
+PUT httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76/product/66d3e9cb65e39338dc7b0a25
+
+
