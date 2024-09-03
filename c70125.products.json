@@ -1,0 +1,98 @@
+[{
+  "_id": {
+    "$oid": "66d3e7ef325fc0b41214f340"
+  },
+  "title": "sadasf",
+  "description": "asfasfq",
+  "code": "12314",
+  "price": 12412,
+  "status": true,
+  "stock": 4124124,
+  "category": "asfgs122",
+  "thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-ro-rj-311-70b94603ae0bc70ca315911959189071-1024-1024.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d3e9cb65e39338dc7b0a25"
+  },
+  "title": "product 6",
+  "description": "estos es una descripcion",
+  "code": "006",
+  "price": 100,
+  "status": true,
+  "stock": 10,
+  "category": "categoria 6",
+  "thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-ma-rj-121-d79c09e8f970c42fe315911959190667-1024-1024.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d3e9d165e39338dc7b0a27"
+  },
+  "title": "product 4",
+  "description": "estos es una descripcion",
+  "code": "005",
+  "price": 1000,
+  "status": true,
+  "stock": 100,
+  "category": "categoria 5",
+  "thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-fr-rj-311-ef4b6ca4b08c3f434315911959189676-1024-1024.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d3e9d765e39338dc7b0a29"
+  },
+  "title": "product 4",
+  "description": "estos es una descripcion",
+  "code": "004",
+  "price": 1000,
+  "status": true,
+  "stock": 100,
+  "category": "categoria 1",
+  "thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-vm-rj-121-a36cf612975ac80ba315911959201994-1024-1024.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d3e9de65e39338dc7b0a2b"
+  },
+  "title": "product 2",
+  "description": "estos es una descripcion",
+  "code": "002",
+  "price": 1000,
+  "status": true,
+  "stock": 10,
+  "category": "categoria 2",
+  "thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-am-rj-111-3374707c83b41fb15515911954612335-1024-1024.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d3e9e565e39338dc7b0a2d"
+  },
+  "title": "product 1",
+  "description": "estos es una descripcion",
+  "code": "001",
+  "price": 1000,
+  "status": true,
+  "stock": 100,
+  "category": "categoria 1",
+  "thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-vi-rj1-122009f0e7fe0bfa3715906956218434-480-0.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66d3ec4165e39338dc7b0a38"
+  },
+  "title": "agfwqe",
+  "description": "12312safasfa",
+  "code": "1234567",
+  "price": 123,
+  "status": true,
+  "stock": 23,
+  "category": "cat 6",
+  "thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-ro-rj-311-70b94603ae0bc70ca315911959189071-1024-1024.jpg",
+  "__v": 0
+}]
