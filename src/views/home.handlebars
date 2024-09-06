@@ -1,16 +1,27 @@
+<main>
 <h1>Productos</h1>
 <div class="products">
-    {{#each products}}
+    {{#each products.docs}}
     <div class="product">
         <h2>{{this.title}}</h2>
         <img src="{{this.thumbnail}}" alt="{{this.title}}" width="150">
         <p>{{this.description}}</p>
         <p>Price: ${{this.price}}</p>
         <p>Stock: {{this.stock}}</p>
-        <form action="/add-to-cart" method="POST">
-            <input type="hidden" name="id" value="{{this.id}}">
-            <button type="submit">Agregar al carrito</button>
+        <form>
+            <button class="agregar-carrito" data-id="{{this._id}}">Agregar al carrito</button>
         </form>
     </div>
     {{/each}}
 </div>
+   <div class="pagination">
+    {{#if products.hasPrevPage}}
+        <a href="/products?page={{products.prevPage}}" class="btn">Anterior</a>
+    {{/if}}
+    <p>Página {{products.page}} de {{products.totalPages}}</p>
+    {{#if products.hasNextPage}}
+        <a href="/products?page={{products.nextPage}}" class="btn">Siguiente</a>
+    {{/if}}
+</div>
+</main>
+<script src="/static/assets/js/home.js"></script>

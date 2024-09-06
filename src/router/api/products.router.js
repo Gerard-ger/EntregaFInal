@@ -7,7 +7,8 @@ const productService = new ProductManagerMongo()
 //Mostrar product
 router.get('/', async (req, res) => {
     try {
-        const products = await productService.getProducts()
+        const { sort } = req.query
+        const products = await productService.getProductsAgg(sort)
         res.send({ status: 'success', data: products })
 
     } catch (error) {

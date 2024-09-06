@@ -1,23 +1,26 @@
 ### Productos
-
+//Mostrar Productos
 GET httP://localhost:8080/api/products
 ###
-GET httP://localhost:8080/api/products/66d38af9ca446cf285d529d8
+//mostrar producto por ID
+GET httP://localhost:8080/api/products/66d70a17b3f317b9068b8981
 ###
+//agregar Producto
 POST httP://localhost:8080/api/products
 Content-Type: application/json
 
 {
-		"title": "product 1",
-		"description": "estos es una descripcion",
-		"code": "001",
-		"price": 1000,
-		"status": "true",
-		"stock": 100,
-		"category": "categoria 1",
-		"thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-vi-rj1-122009f0e7fe0bfa3715906956218434-480-0.jpg"
-	}
+  "title": "sadasf",
+  "description": "asfasfq",
+  "code": "12314",
+  "price": 12412,
+  "status": true,
+  "stock": 4124124,
+  "category": "asfgs122",
+  "thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-ro-rj-311-70b94603ae0bc70ca315911959189071-1024-1024.jpg"
+}
 ###
+//Eliminar prodcuto por ID
 DELETE httP://localhost:8080/api/products/66d39e9ac3919216af50c806
 
 ###
@@ -25,33 +28,49 @@ DELETE httP://localhost:8080/api/products/66d39e9ac3919216af50c806
 
 
 ### CARTS
+//Genera un carrito
 GET httP://localhost:8080/api/carts
 
 ###
-GET httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76
+//Muestra un carrito por ID
+GET httP://localhost:8080/api/carts/66d729f3d403fb9c06ff344a
 
 ###
-POST  httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76/product/66d3e9cb65e39338dc7b0a25
+//Agrega al carrito un producto por ID
+POST  httP://localhost:8080/api/carts/66da006ec8f9222c7d4045e9/product/66d87e01d74aae395d9eee20
 
 ###
-DELETE httP://localhost:8080/api/carts/66d660668c66b1a68fc46ec8
+//Eliminar un carrito por ID
+DELETE httP://localhost:8080/api/carts/66d9b46354ec808969b43657
 
 ###
-DELETE  httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76/product/66d3e9cb65e39338dc7b0a25
+//Eliminar un producto de un carrito
+DELETE  httP://localhost:8080/api/carts/66d729f3d403fb9c06ff344a/product/66d7c3ff9c85c8fa6ee73e32
 
 ###
-
-PUT httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76
+//agregar un array de producto a un ID de carrito
+PUT httP://localhost:8080/api/carts/66d9b46354ec808969b43657
 Content-Type: application/json
 
-{
-	[{"productId": "66d3e9cb65e39338dc7b0a25", "quantity": 2},
-	{"productId": "66d3e9e565e39338dc7b0a2d", "quantity": 1},
-	{"productId": "66d3ec4165e39338dc7b0a38", "quantity": 1},
-	]
+[
+	{"productId": "66d87da9d74aae395d9eee1a", "quantity": 2},
+	{"productId": "66d87dd4d74aae395d9eee1d", "quantity": 1},
+	{"productId": "66d87d7dd74aae395d9eee17", "quantity": 1}
+]
+
+
+###
+//agregar cantidad de productos enviado en body
+PUT httP://localhost:8080/api/carts/66d729f3d403fb9c06ff344a/product/66d729f3d403fb9c06ff344a
+Content-Type: application/json
+
+{ 
+	"quantity": 1000
 }
 
 ###
-PUT httP://localhost:8080/api/carts/66d661d38a274a39d6e27a76/product/66d3e9cb65e39338dc7b0a25
+//eliminar todos los productos de un carrito
+DELETE httP://localhost:8080/api/carts/66d729f3d403fb9c06ff344a
+
 
 

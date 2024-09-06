@@ -237,3 +237,108 @@ h1 {
         flex: 1 1 100%; /* 1 column layout on small screens */
     }
 }
+
+.menu-superior {
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+    background-color: #333;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.menu-superior ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacio entre los elementos del menú */
+}
+
+.menu-superior ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-superior ul li a:hover {
+    text-decoration: underline;
+}
+/* Estilos del Contenido Principal */
+.contenido-principal {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Para que el contenido principal sea desplazable si es muy largo */
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#productsCart-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.product {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    padding: 10px; 
+    width: 200px; 
+    box-sizing: border-box; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pagination p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.pagination .btn {
+    text-decoration: none;
+    background-color: #3ccdb0;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .btn:hover {
+    background-color: #11947a;
+}

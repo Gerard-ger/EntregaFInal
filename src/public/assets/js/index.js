@@ -1,5 +1,6 @@
 const socket = io()
 
+//socket para generar vista de productos
 socket.on('productList', products => {
     // console.log(products)
     const productListDiv = document.querySelector('#product-list')
@@ -20,7 +21,7 @@ socket.on('productList', products => {
         <p class="product-text">ID: ${product._id}</p>
     </div>
     <div class="product-footer">
-        <button class="btn btn-outline-dark w-100 delete-button" data-id="${product._id}">Eliminar</button>
+        <button class="btn btn-outline-dark w-100 button-delete" data-id="${product._id}">Eliminar</button>
     </div>
 </div>           
         `
@@ -28,7 +29,7 @@ socket.on('productList', products => {
     productListDiv.innerHTML = html
 })
 
-
+//carga de formulario a la DB
 let form = document.querySelector('#products-form')
 
 form.addEventListener('submit', evt => {
@@ -47,27 +48,22 @@ form.addEventListener('submit', evt => {
 
     socket.emit('addProduct', nuevoProduct)
 
-    form.reset()
+    //form.reset()
 
 })
 
+//botones eliminar
+const productListDiv = document.querySelector('#product-list')
 
-document.addEventListener("DOMContentLoaded", () => {
-    const deleteButtons = document.querySelectorAll('[data-id]')
-    console.log("se creo un evento", deleteButtons.length);
+productListDiv.addEventListener('click', function(event) {
+    if (event.target.classList.contains('button-delete')) {
 
-    deleteButtons.forEach(button => {      
-        button.addEventListener('click', () => {
-            const productId = this.getAttribute('data-id')
+        const productId = event.target.getAttribute('data-id')
+        socket.emit('deleteProduct', productId)
 
-            console.log(productId);
+    }
+});
 
-            //socket.emit('deleteProduct', {_id: productId})
-
-        })
-    })
-
-})
 
 
 

@@ -8,6 +8,7 @@ class CartsManagerMongo {
 
     getCarts = async () => await this.model.find({})
     getCart = async opts => await this.model.findOne(opts)
+    getCartPopu = async opts => await this.model.findOne(opts).populate('products.productId')
     createCart = async newCart => await this.model.create(newCart)
     deleteCart = async (pid) => await this.model.deleteOne(pid)
 
@@ -44,7 +45,16 @@ class CartsManagerMongo {
         await cart.save()
         return cart
     }
+
+    deleteAllProductsFromCart = async (cid) => {
+        const cart = await this.getCart({_id: cid})
+
+        cart.products = []
+
+        await cart.save()
+        return cart
+    }
     
 }
 
-module.exports = {CartsManagerMongo}
+module.exports = { CartsManagerMongo }
