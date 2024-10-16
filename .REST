@@ -73,4 +73,36 @@ Content-Type: application/json
 DELETE httP://localhost:8080/api/carts/66d729f3d403fb9c06ff344a
 
 
+### USERS
+//login
+POST http://localhost:8080/api/sessions/login 
+Content-Type: application/json
 
+{
+"email": "gomezalf707@gmail.com", "password": "123456"
+}
+
+//register
+### 
+POST http://localhost:8080/api/sessions/register 
+Content-Type: application/json
+
+{
+"first_name": "fulanito3", "last_name": "deTal", "email": "fulano3@gmail.com", "role": "admin", "password": "123456"
+} 
+
+###
+GET http://localhost:8080/api/users 
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTAzYWZiOWM1NDIxZGZiNDQwMDM3MyIsImVtYWlsIjoiZnVsYW5vMkBnbWFpbC5jb20iLCJyb2xlIjpmYWxzZSwiaWF0IjoxNzI5MTIxNDQ5LCJleHAiOjE3MjkxMjUwNDl9.qM_hNL5rMsACg3xD_Peg2uSeg-aDtBsMeITRetRHvZk
+
+### 
+POST http://localhost:8080/api/users 
+Content-Type: application/json
+
+{
+"first_name": "fulanito3", "last_name": "deTal", "email": "fulano3@gmail.com"
+}
+
+###
+GET http://localhost:8080/api/sessions/current
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MTAzNzZiYTEwNWY3YmYzZDk5OTg4YiIsImVtYWlsIjoiZ29tZXphbGY3MDdAZ21haWwuY29tIiwicm9sZSI6dHJ1ZSwiaWF0IjoxNzI5MTIxNTQyLCJleHAiOjE3MjkxMjUxNDJ9.ynoAtG-aLKGzj23vDj4dwXm1LKdQSh77hCnG27ehnsM
