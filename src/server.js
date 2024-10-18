@@ -5,6 +5,10 @@ const { CartsManagerMongo } = require('./daos/MONGO/cartsManager.mongo')
 const { Server } = require('socket.io')
 const appRouter = require('./router/index.js')
 const { connectDB } = require('./config/index.js')
+const { initializePassport } = require('./config/passport.config.js')
+const passport = require('passport')
+const cookieParser = require('cookie-parser')
+const session      = require('express-session')
 
 
 const app = express()
@@ -67,6 +71,19 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/static', express.static(__dirname + '/public'))
 app.use(appRouter)
 connectDB()
+
+//coookies
+// la palabra secreta del cookie parse debe estar en el .env
+app.use(cookieParser('palabrasecreta'))
+app.use(session({
+    secret: 'secretcoder',
+    resave: true,
+    saveUninitialized: true
+}))
+
+//passport jwt
+initializePassport()
+app.use(passport.initialize())
 
 
 //configuracion de plantillas

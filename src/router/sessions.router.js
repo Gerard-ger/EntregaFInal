@@ -2,7 +2,8 @@ const { Router } = require('express')
 const UserDaoMongo = require('../daos/MONGO/usersDaoMongo')
 const { createHash, isValidPassword } = require('../utils/hash')
 const { generateToken, authTokenMiddleware } = require('../utils/jwt')
-
+const { passportCall } = require('../utils/passport/passportCall')
+const { authorization } = require('../utils/passport/authorization.middleware')
 
 const router = Router()
 const usersService = new UserDaoMongo()
@@ -36,6 +37,8 @@ router.post('/register', async (req, res)=>{
     })
 })
 
+
+
 router.post('/login', async (req, res)=>{
     const { email, password } = req.body
 
@@ -59,9 +62,8 @@ router.post('/login', async (req, res)=>{
 })
 
 
-router.get('/current', authTokenMiddleware, (req, res) => {
-  
-    res.send(req.user)
+router.get('/current', passportCall('jwt'), authorization('admin'), (req, res) => {
+  res.send({dataUser: req.user, message: 'datos sensibles'})
 })
 
 router.get('/logout', (req, res)=> {
